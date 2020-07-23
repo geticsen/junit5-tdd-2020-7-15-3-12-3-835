@@ -2,28 +2,20 @@ package junit5.tdd;
 
 public class FizzBuzzWhizz {
     public String play(int number) {
-        if (number % 3 == 0&&number % 5 == 0&&number % 7 == 0) {
-            return "fizzbuzzwhizz";
-        }
-        if (number % 3 == 0&&number % 7 == 0) {
-            return "fizzwhizz";
-        }
-        if (number % 3 == 0&&number % 5 == 0) {
-            return "fizzbuzz";
-        }
-        if (number % 5 == 0&&number % 7 == 0) {
-            return "buzzwhizz";
-        }
+        String line = "";
         if (number % 3 == 0) {
-            return "fizz";
+            line+= "fizz";
         }
         if (number % 5 == 0) {
-            return "buzz";
+            line+=  "buzz";
         }
         if (number % 7 == 0) {
-            return "whizz";
+            line+=  "whizz";
         }
-        return String.valueOf(number);
+        if (line.equals("")){
+            line = String.valueOf(number);
+        }
+        return line;
     }
 
 }
